@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/4e14450196.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="index.css" />
+		<title>Simply useless</title>
+	</head>
+	<body class="container">
+		<script>
+			let num = 0;
+			const click = new Audio('assets/click.wav');
+			function d_dec() {
+				num = num - 3;
+				document.getElementById('value').innerHTML = num;
+			}
+			function decrement() {
+				num--;
+				document.getElementById('value').innerHTML = num;
+			}
+			function reset() {
+				num = 0;
+				document.getElementById('value').innerHTML = num;
+			}
+			function increment() {
+				num++;
+				document.getElementById('value').innerHTML = num;
+			}
+			function d_inc() {
+				num = num + 3;
+				document.getElementById('value').innerHTML = num;
+			}
+		</script>
+		<h1 id="value">0</h1>
+		<div class="buttons">
+			<button class="d_dec" onmousedown="d_dec()">
+				<i class="fa-solid fa-angles-down"></i>
+			</button>
+			<button class="dec" onmousedown="decrement()">
+				<i class="fa-solid fa-angle-down"></i>
+			</button>
+			<button class="reset" onmousedown="reset()">
+				<i class="fa-solid fa-stop"></i>
+			</button>
+			<button class="inc" onmousedown="increment()">
+				<i class="fa-solid fa-angle-up"></i>
+			</button>
+			<button class="d_inc" onmousedown="d_inc()">
+				<i class="fa-solid fa-angles-up"></i>
+			</button>
+		</div>
+	</body>
+</html>
